@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDining | Universidad de La Sabana</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        };
+    </script>
+</head>
+
+<body class="bg-white text-[#080736] transition-colors duration-300 dark:bg-slate-900 dark:text-white">
+
+    <header class="bg-[#080736] px-5 py-6 text-center text-white dark:bg-slate-950">
+        <div class="flex items-center justify-between gap-4">
+            <div class="flex-1">
+                <h1 class="text-4xl font-bold md:text-5xl">
+                    WebDining
+                </h1>
+
+                <p class="mt-2 text-lg text-[#d9d8e8]">
+                    Universidad de La Sabana
+                </p>
+            </div>
+
+            <button
+                id="dark-mode-toggle"
+                type="button"
+                class="rounded-lg border border-[#d9d8e8] px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-[#080736]"
+            >
+                <span id="dark-mode-label">Dark mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section
+            class="bg-[#15134f] px-6 py-16 text-center text-white md:px-10"
+            aria-labelledby="hero-heading"
+        >
+            <h2 id="hero-heading" class="text-3xl font-bold md:text-4xl">
+                Skip the line. Order smarter.
+            </h2>
+
+            <p class="mx-auto mt-4 max-w-2xl text-[#d9d8e8]">
+                WebDining is a web application designed to make food ordering
+                faster and easier for students, professors and staff at
+                Universidad de La Sabana.
+            </p>
+
+            <a
+                href="#solution"
+                class="mt-6 inline-block rounded-md border-2 border-[#d9c77a] bg-[#d9c77a] px-6 py-3 text-sm font-semibold text-[#080736] transition hover:opacity-90"
+            >
+                Discover WebDining
+            </a>
+        </section>
+
+        <!-- Problem -->
+        <section
+            class="px-6 py-12 text-center text-[#080736] dark:text-white md:px-10"
+            aria-labelledby="problem-heading"
+        >
+            <h2 id="problem-heading" class="text-2xl font-bold md:text-3xl">
+                The Problem
+            </h2>
+
+            <p class="mx-auto mt-4 max-w-3xl leading-relaxed">
+                During peak hours, university restaurants experience long
+                waiting lines. This can cause late arrivals to classes and
+                meetings, overcrowded hallways, slower service and inefficient
+                restaurant workflows.
+            </p>
+        </section>
+
+        <!-- Solution -->
+        <section
+            id="solution"
+            class="grid gap-5 px-6 py-10 md:grid-cols-2 lg:grid-cols-4"
+            aria-labelledby="solution-heading"
+        >
+            <h2
+                id="solution-heading"
+                class="col-span-full mb-2 text-center text-2xl font-bold text-[#080736] dark:text-white md:text-3xl"
+            >
+                Our Solution
+            </h2>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Digital Menu
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Browse restaurant menus and choose meals directly from your device.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Digital Payment
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Pay digitally without having to wait in line to place your order.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Order Tracking
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Follow your order status from reception to pickup.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    QR Pickup
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Receive a QR code and use it to verify your order when it is ready.
+                </p>
+            </article>
+        </section>
+
+        <!-- Menu / Real-time search -->
+        <section
+            id="menu"
+            class="px-6 py-10 md:px-10"
+            aria-labelledby="menu-heading"
+        >
+            <h2
+                id="menu-heading"
+                class="mb-2 text-center text-2xl font-bold text-[#080736] dark:text-white md:text-3xl"
+            >
+                Today's Menu
+            </h2>
+
+            <p class="mx-auto mb-6 max-w-2xl text-center text-[#29266b] dark:text-[#d9d8e8]">
+                Search the menu below — the list updates as you type.
+            </p>
+
+            <div class="mx-auto mb-6 max-w-md">
+                <label for="menu-search" class="sr-only">Search menu items</label>
+                <input
+                    id="menu-search"
+                    type="text"
+                    placeholder="Search for a dish (e.g. bowl, juice, salad)..."
+                    class="w-full rounded-md border-2 border-[#29266b] bg-white px-4 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                />
+            </div>
+
+            <p id="menu-empty" class="hidden text-center text-[#29266b] dark:text-[#d9d8e8]">
+                No dishes match your search.
+            </p>
+
+            <ul
+                id="menu-list"
+                class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+            ></ul>
+        </section>
+
+        <!-- Order form -->
+        <section
+            id="order"
+            class="px-6 py-10 md:px-10"
+            aria-labelledby="order-heading"
+        >
+            <h2
+                id="order-heading"
+                class="mb-6 text-center text-2xl font-bold text-[#080736] dark:text-white md:text-3xl"
+            >
+                Place an Order
+            </h2>
+
+            <form
+                id="order-form"
+                novalidate
+                class="mx-auto grid max-w-xl gap-5 rounded-xl border-2 border-[#29266b] bg-white p-6 shadow-sm dark:border-slate-600 dark:bg-slate-800"
+            >
+                <div>
+                    <label for="order-name" class="mb-1 block text-sm font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                        Full name
+                    </label>
+                    <input
+                        id="order-name"
+                        name="name"
+                        type="text"
+                        class="w-full rounded-md border-2 border-[#29266b] bg-white px-3 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                    />
+                    <p class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-error-for="name"></p>
+                </div>
+
+                <div>
+                    <label for="order-email" class="mb-1 block text-sm font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                        University email
+                    </label>
+                    <input
+                        id="order-email"
+                        name="email"
+                        type="email"
+                        class="w-full rounded-md border-2 border-[#29266b] bg-white px-3 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                    />
+                    <p class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-error-for="email"></p>
+                </div>
+
+                <div>
+                    <label for="order-dish" class="mb-1 block text-sm font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                        Dish
+                    </label>
+                    <select
+                        id="order-dish"
+                        name="dish"
+                        class="w-full rounded-md border-2 border-[#29266b] bg-white px-3 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                    >
+                        <option value="">Select a dish...</option>
+                    </select>
+                    <p class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-error-for="dish"></p>
+                </div>
+
+                <div>
+                    <label for="order-quantity" class="mb-1 block text-sm font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                        Quantity
+                    </label>
+                    <input
+                        id="order-quantity"
+                        name="quantity"
+                        type="number"
+                        min="1"
+                        max="10"
+                        class="w-full rounded-md border-2 border-[#29266b] bg-white px-3 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                    />
+                    <p class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-error-for="quantity"></p>
+                </div>
+
+                <div>
+                    <label for="order-notes" class="mb-1 block text-sm font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                        Notes (optional)
+                    </label>
+                    <textarea
+                        id="order-notes"
+                        name="notes"
+                        rows="3"
+                        maxlength="200"
+                        class="w-full rounded-md border-2 border-[#29266b] bg-white px-3 py-2 text-[#080736] outline-none transition focus:border-[#d9c77a] dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                    ></textarea>
+                    <p class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-error-for="notes"></p>
+                </div>
+
+                <button
+                    type="submit"
+                    class="mt-2 rounded-md border-2 border-[#d9c77a] bg-[#d9c77a] px-6 py-3 text-sm font-semibold text-[#080736] transition hover:opacity-90"
+                >
+                    Place order
+                </button>
+
+                <p id="order-success" class="hidden rounded-md bg-green-100 px-3 py-2 text-sm font-semibold text-green-800 dark:bg-green-900 dark:text-green-200">
+                    Your order has been placed! We'll notify you when it's ready.
+                </p>
+            </form>
+        </section>
+
+        <!-- Target Users -->
+        <section
+            class="grid gap-5 px-6 py-10 md:grid-cols-2 lg:grid-cols-4"
+            aria-labelledby="users-heading"
+        >
+            <h2
+                id="users-heading"
+                class="col-span-full mb-2 text-center text-2xl font-bold text-[#080736] dark:text-white md:text-3xl"
+            >
+                Target Users
+            </h2>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Students
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Order food quickly without missing classes or wasting time in lines.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    University Staff &amp; Professors
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Order meals efficiently during busy university hours.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Restaurant Staff
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Manage incoming orders and update their status.
+                </p>
+            </article>
+
+            <article
+                class="rounded-xl border-2 border-[#29266b] bg-white p-5 text-[#080736] shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+            >
+                <h3 class="text-xl font-semibold text-[#29266b] dark:text-[#d9d8e8]">
+                    Administrators
+                </h3>
+
+                <p class="mt-2 leading-relaxed">
+                    Manage menus, prices, descriptions and availability.
+                </p>
+            </article>
+        </section>
+
+        <!-- Team -->
+        <section
+            class="px-6 py-10 md:px-10"
+            aria-labelledby="team-heading"
+        >
+            <h2
+                id="team-heading"
+                class="mb-6 text-center text-2xl font-bold text-[#080736] dark:text-white md:text-3xl"
+            >
+                Our Team
+            </h2>
+
+            <ul class="grid gap-5 md:grid-cols-2">
+
+                <li
+                    class="flex flex-col gap-1 rounded-xl border-2 border-[#29266b] bg-white p-4 text-[#080736] dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                >
+                    <strong class="font-bold text-[#15134f] dark:text-[#d9d8e8]">
+                        Jeronimo Quintero
+                    </strong>
+
+                    <span>— Project Leader / Documentation</span>
+                </li>
+
+                <li
+                    class="flex flex-col gap-1 rounded-xl border-2 border-[#29266b] bg-white p-4 text-[#080736] dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                >
+                    <strong class="font-bold text-[#15134f] dark:text-[#d9d8e8]">
+                        Laura Sofia Parra
+                    </strong>
+
+                    <span>— UI/UX Designer</span>
+                </li>
+
+                <li
+                    class="flex flex-col gap-1 rounded-xl border-2 border-[#29266b] bg-white p-4 text-[#080736] dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                >
+                    <strong class="font-bold text-[#15134f] dark:text-[#d9d8e8]">
+                        Juan Diego Vargas
+                    </strong>
+
+                    <span>— Frontend Developer</span>
+                </li>
+
+                <li
+                    class="flex flex-col gap-1 rounded-xl border-2 border-[#29266b] bg-white p-4 text-[#080736] dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                >
+                    <strong class="font-bold text-[#15134f] dark:text-[#d9d8e8]">
+                        Juan Andres Beltran
+                    </strong>
+
+                    <span>— Backend Developer</span>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="mt-10 bg-[#080736] px-5 py-6 text-center text-[#d9d8e8] dark:bg-slate-950">
+        <p>WebDining — Universidad de La Sabana</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.querySelector("#dark-mode-toggle");
+        const darkModeLabel = document.querySelector("#dark-mode-label");
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+            html.classList.add("dark");
+            darkModeLabel.textContent = "Light mode";
+        }
+
+        darkModeToggle.addEventListener("click", () => {
+            html.classList.toggle("dark");
+
+            const isDarkMode = html.classList.contains("dark");
+
+            localStorage.setItem(
+                "theme",
+                isDarkMode ? "dark" : "light"
+            );
+
+            darkModeLabel.textContent = isDarkMode
+                ? "Light mode"
+                : "Dark mode";
+        });
+    </script>
+
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
