@@ -1,3 +1,5 @@
+Juan Andrés Beltrán 
+
 # HW05 — JavaScript Fundamentals
 
 **Week 5 · DSAW · Universidad de La Sabana**
